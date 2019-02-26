@@ -1,0 +1,25 @@
+//
+//  PreviewViewController.swift
+//  AnimeSaver
+//
+//  Created by Jason on 2/21/19.
+//  Copyright © 2019 Jason. All rights reserved.
+//
+
+import UIKit
+import AVFoundation
+
+class PreviewViewController: UIViewController {
+    var test = ""
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
+
+  
+
+}

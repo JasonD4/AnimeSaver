@@ -1,0 +1,6 @@
+framework module Pods_AnimeSaver {
+  umbrella header "Pods-AnimeSaver-umbrella.h"
+
+  export *
+  module * { export * }
+}

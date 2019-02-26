@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		961A2DE5220CD9C4001A95E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961A2DE4220CD9C4001A95E6 /* AppDelegate.swift */; };
-		961A2DE7220CD9C4001A95E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961A2DE6220CD9C4001A95E6 /* ViewController.swift */; };
+		961A2DE7220CD9C4001A95E6 /* AnimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961A2DE6220CD9C4001A95E6 /* AnimeViewController.swift */; };
 		961A2DEA220CD9C4001A95E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961A2DE8220CD9C4001A95E6 /* Main.storyboard */; };
 		961A2DEC220CD9C4001A95E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 961A2DEB220CD9C4001A95E6 /* Assets.xcassets */; };
 		961A2DEF220CD9C4001A95E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 961A2DED220CD9C4001A95E6 /* LaunchScreen.storyboard */; };
 		961A2DFA220CD9C4001A95E6 /* AnimeSaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961A2DF9220CD9C4001A95E6 /* AnimeSaverTests.swift */; };
 		961A2E05220CD9C4001A95E6 /* AnimeSaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961A2E04220CD9C4001A95E6 /* AnimeSaverUITests.swift */; };
+		9665C3AB22122431000E61C6 /* AnimeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665C3AA22122431000E61C6 /* AnimeDetailViewController.swift */; };
+		9665C3AF22122674000E61C6 /* AnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665C3AE22122674000E61C6 /* AnimeCell.swift */; };
+		96CB6FEB2225961600810F11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96CB6FEA2225961600810F11 /* GoogleService-Info.plist */; };
+		96CF31A1221F0710003D151E /* AnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CF31A0221F0710003D151E /* AnimeModel.swift */; };
+		96CF31A4221F074C003D151E /* StreamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CF31A3221F074C003D151E /* StreamModel.swift */; };
+		96CF31A7221F0EB3003D151E /* UrlConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CF31A6221F0EB3003D151E /* UrlConverter.swift */; };
+		96CF31A9221F0F67003D151E /* MyNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CF31A8221F0F67003D151E /* MyNetworkHelper.swift */; };
+		96CF31AB221F1C42003D151E /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CF31AA221F1C42003D151E /* PreviewViewController.swift */; };
+		D4C9D1C12F45EAC8FD5866AB /* Pods_AnimeSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C39802097BFB4C45D575E5 /* Pods_AnimeSaver.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B49318EBAF532148DE8607E /* Pods-AnimeSaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeSaver.release.xcconfig"; path = "Target Support Files/Pods-AnimeSaver/Pods-AnimeSaver.release.xcconfig"; sourceTree = "<group>"; };
 		961A2DE1220CD9C4001A95E6 /* AnimeSaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeSaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		961A2DE4220CD9C4001A95E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		961A2DE6220CD9C4001A95E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		961A2DE6220CD9C4001A95E6 /* AnimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeViewController.swift; sourceTree = "<group>"; };
 		961A2DE9220CD9C4001A95E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		961A2DEB220CD9C4001A95E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		961A2DEE220CD9C4001A95E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +57,16 @@
 		961A2E00220CD9C4001A95E6 /* AnimeSaverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimeSaverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		961A2E04220CD9C4001A95E6 /* AnimeSaverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeSaverUITests.swift; sourceTree = "<group>"; };
 		961A2E06220CD9C4001A95E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9665C3AA22122431000E61C6 /* AnimeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeDetailViewController.swift; sourceTree = "<group>"; };
+		9665C3AE22122674000E61C6 /* AnimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCell.swift; sourceTree = "<group>"; };
+		96CB6FEA2225961600810F11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		96CF31A0221F0710003D151E /* AnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeModel.swift; sourceTree = "<group>"; };
+		96CF31A3221F074C003D151E /* StreamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamModel.swift; sourceTree = "<group>"; };
+		96CF31A6221F0EB3003D151E /* UrlConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlConverter.swift; sourceTree = "<group>"; };
+		96CF31A8221F0F67003D151E /* MyNetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNetworkHelper.swift; sourceTree = "<group>"; };
+		96CF31AA221F1C42003D151E /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		ACF1A1A5B4D0236B82CAA1F1 /* Pods-AnimeSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeSaver.debug.xcconfig"; path = "Target Support Files/Pods-AnimeSaver/Pods-AnimeSaver.debug.xcconfig"; sourceTree = "<group>"; };
+		E1C39802097BFB4C45D575E5 /* Pods_AnimeSaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimeSaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C9D1C12F45EAC8FD5866AB /* Pods_AnimeSaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +102,8 @@
 				961A2DF8220CD9C4001A95E6 /* AnimeSaverTests */,
 				961A2E03220CD9C4001A95E6 /* AnimeSaverUITests */,
 				961A2DE2220CD9C4001A95E6 /* Products */,
+				CA9D092EE41E478C5C83BD46 /* Pods */,
+				F3F68A0833B46C1F1F647FAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +120,12 @@
 		961A2DE3220CD9C4001A95E6 /* AnimeSaver */ = {
 			isa = PBXGroup;
 			children = (
-				961A2DE4220CD9C4001A95E6 /* AppDelegate.swift */,
-				961A2DE6220CD9C4001A95E6 /* ViewController.swift */,
-				961A2DE8220CD9C4001A95E6 /* Main.storyboard */,
-				961A2DEB220CD9C4001A95E6 /* Assets.xcassets */,
-				961A2DED220CD9C4001A95E6 /* LaunchScreen.storyboard */,
+				96CF31A5221F0EA5003D151E /* Helpers */,
+				96CF31A2221F071D003D151E /* Models */,
+				9665C3AC2212245F000E61C6 /* VC's */,
+				9665C3AD22122499000E61C6 /* Extra */,
 				961A2DF0220CD9C4001A95E6 /* Info.plist */,
+				96CB6FEA2225961600810F11 /* GoogleService-Info.plist */,
 			);
 			path = AnimeSaver;
 			sourceTree = "<group>";
@@ -125,6 +148,63 @@
 			path = AnimeSaverUITests;
 			sourceTree = "<group>";
 		};
+		9665C3AC2212245F000E61C6 /* VC's */ = {
+			isa = PBXGroup;
+			children = (
+				961A2DE6220CD9C4001A95E6 /* AnimeViewController.swift */,
+				96CF31AA221F1C42003D151E /* PreviewViewController.swift */,
+				9665C3AA22122431000E61C6 /* AnimeDetailViewController.swift */,
+				9665C3AE22122674000E61C6 /* AnimeCell.swift */,
+			);
+			path = "VC's";
+			sourceTree = "<group>";
+		};
+		9665C3AD22122499000E61C6 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				961A2DE8220CD9C4001A95E6 /* Main.storyboard */,
+				961A2DEB220CD9C4001A95E6 /* Assets.xcassets */,
+				961A2DE4220CD9C4001A95E6 /* AppDelegate.swift */,
+				961A2DED220CD9C4001A95E6 /* LaunchScreen.storyboard */,
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		96CF31A2221F071D003D151E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96CF31A0221F0710003D151E /* AnimeModel.swift */,
+				96CF31A3221F074C003D151E /* StreamModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96CF31A5221F0EA5003D151E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				96CF31A6221F0EB3003D151E /* UrlConverter.swift */,
+				96CF31A8221F0F67003D151E /* MyNetworkHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CA9D092EE41E478C5C83BD46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACF1A1A5B4D0236B82CAA1F1 /* Pods-AnimeSaver.debug.xcconfig */,
+				2B49318EBAF532148DE8607E /* Pods-AnimeSaver.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3F68A0833B46C1F1F647FAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1C39802097BFB4C45D575E5 /* Pods_AnimeSaver.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 961A2E09220CD9C4001A95E6 /* Build configuration list for PBXNativeTarget "AnimeSaver" */;
 			buildPhases = (
+				42895DB5A4E58CCDD4C12BD9 /* [CP] Check Pods Manifest.lock */,
 				961A2DDD220CD9C4001A95E6 /* Sources */,
 				961A2DDE220CD9C4001A95E6 /* Frameworks */,
 				961A2DDF220CD9C4001A95E6 /* Resources */,
+				7B9A33997C25F2B22A30C1B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,6 +313,7 @@
 			files = (
 				961A2DEF220CD9C4001A95E6 /* LaunchScreen.storyboard in Resources */,
 				961A2DEC220CD9C4001A95E6 /* Assets.xcassets in Resources */,
+				96CB6FEB2225961600810F11 /* GoogleService-Info.plist in Resources */,
 				961A2DEA220CD9C4001A95E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,13 +334,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		42895DB5A4E58CCDD4C12BD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimeSaver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B9A33997C25F2B22A30C1B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimeSaver/Pods-AnimeSaver-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimeSaver/Pods-AnimeSaver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		961A2DDD220CD9C4001A95E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				961A2DE7220CD9C4001A95E6 /* ViewController.swift in Sources */,
+				96CF31A9221F0F67003D151E /* MyNetworkHelper.swift in Sources */,
+				9665C3AF22122674000E61C6 /* AnimeCell.swift in Sources */,
+				9665C3AB22122431000E61C6 /* AnimeDetailViewController.swift in Sources */,
+				96CF31A7221F0EB3003D151E /* UrlConverter.swift in Sources */,
+				96CF31A1221F0710003D151E /* AnimeModel.swift in Sources */,
+				961A2DE7220CD9C4001A95E6 /* AnimeViewController.swift in Sources */,
 				961A2DE5220CD9C4001A95E6 /* AppDelegate.swift in Sources */,
+				96CF31A4221F074C003D151E /* StreamModel.swift in Sources */,
+				96CF31AB221F1C42003D151E /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +581,7 @@
 		};
 		961A2E0A220CD9C4001A95E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACF1A1A5B4D0236B82CAA1F1 /* Pods-AnimeSaver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +600,7 @@
 		};
 		961A2E0B220CD9C4001A95E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B49318EBAF532148DE8607E /* Pods-AnimeSaver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
