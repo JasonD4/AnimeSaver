@@ -48,6 +48,14 @@ class AnimeViewController: UIViewController {
             let animeDVC = segue.destination as? AnimeDetailViewController else {return}
         animeDVC.animeOfIntrestADV = anime[indexPath[0].row]
     }
+    
+    @IBAction func login(_ sender: UIBarButtonItem) {
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let vc = story.instantiateViewController(withIdentifier: "LoginVC")
+//        self.present(vc, animated: true)
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 

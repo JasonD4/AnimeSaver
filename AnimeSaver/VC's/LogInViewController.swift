@@ -37,6 +37,8 @@ class LogInViewController: UIViewController {
         usersession = (UIApplication.shared.delegate as! AppDelegate).usersession
         usersession.userSessionAccountDelegate = self
         usersession.usersessionSignInDelegate = self
+        toLogIn.setTitle("Create", for: .normal)
+        logInStatus.setTitle("Login into your account", for: .normal)
         // Do any additional setup after loading the view.
     }
     
@@ -89,7 +91,8 @@ extension LogInViewController: UserSessionAccountCreationDelegate{
     func didCreateAccount(_ userSession: UserSession, user: User) {
         showAlert(title: "Account Created", message: "Account created using \(user.email ?? "No Email Provided")", style: .alert) { (alert) in
             
-            let vc = AnimeViewController()
+            let story = UIStoryboard(name: "Main", bundle: nil)
+            let vc = story.instantiateViewController(withIdentifier: "AnimeViewContoller")
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -107,7 +110,10 @@ extension LogInViewController: UserSessionSignInDelegate{
     }
     
     func didSignInExistingUser(_ usersession: UserSession, user: User) {
-        self.present(AnimeViewController(), animated: true)
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let tabController = story.instantiateViewController(withIdentifier: "test")
+        present(tabController, animated: true)
+        
     }
     
     

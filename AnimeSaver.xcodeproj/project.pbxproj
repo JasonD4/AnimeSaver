@@ -23,6 +23,10 @@
 		964A3ADA222DD03A00C88BA5 /* StorageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AD9222DD03A00C88BA5 /* StorageModel.swift */; };
 		964A3ADC222DD06D00C88BA5 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3ADB222DD06D00C88BA5 /* StorageKeys.swift */; };
 		964A3ADF222DD19E00C88BA5 /* VCAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3ADE222DD19E00C88BA5 /* VCAlerts.swift */; };
+		964A3AE1222F0B2700C88BA5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AE0222F0B2700C88BA5 /* ProfileViewController.swift */; };
+		964A3AE3222F115200C88BA5 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AE2222F115200C88BA5 /* ImageHelper.swift */; };
+		964A3AE5222F117300C88BA5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AE4222F117300C88BA5 /* AppError.swift */; };
+		964A3AE7222F11B300C88BA5 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AE6222F11B300C88BA5 /* NetworkHelper.swift */; };
 		9665C3AB22122431000E61C6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665C3AA22122431000E61C6 /* PreviewViewController.swift */; };
 		9665C3AF22122674000E61C6 /* AnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665C3AE22122674000E61C6 /* AnimeCell.swift */; };
 		96CB6FEB2225961600810F11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96CB6FEA2225961600810F11 /* GoogleService-Info.plist */; };
@@ -75,6 +79,10 @@
 		964A3AD9222DD03A00C88BA5 /* StorageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageModel.swift; sourceTree = "<group>"; };
 		964A3ADB222DD06D00C88BA5 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
 		964A3ADE222DD19E00C88BA5 /* VCAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCAlerts.swift; sourceTree = "<group>"; };
+		964A3AE0222F0B2700C88BA5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		964A3AE2222F115200C88BA5 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		964A3AE4222F117300C88BA5 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		964A3AE6222F11B300C88BA5 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		9665C3AA22122431000E61C6 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		9665C3AE22122674000E61C6 /* AnimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCell.swift; sourceTree = "<group>"; };
 		96CB6FEA2225961600810F11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -205,6 +213,7 @@
 				9665C3AA22122431000E61C6 /* PreviewViewController.swift */,
 				9665C3AE22122674000E61C6 /* AnimeCell.swift */,
 				964A3AD4222D011000C88BA5 /* LogInViewController.swift */,
+				964A3AE0222F0B2700C88BA5 /* ProfileViewController.swift */,
 			);
 			path = "VC's";
 			sourceTree = "<group>";
@@ -235,6 +244,9 @@
 			children = (
 				96CF31A6221F0EB3003D151E /* UrlConverter.swift */,
 				96CF31A8221F0F67003D151E /* MyNetworkHelper.swift */,
+				964A3AE2222F115200C88BA5 /* ImageHelper.swift */,
+				964A3AE4222F117300C88BA5 /* AppError.swift */,
+				964A3AE6222F11B300C88BA5 /* NetworkHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -455,12 +467,15 @@
 				964A3ADC222DD06D00C88BA5 /* StorageKeys.swift in Sources */,
 				9665C3AF22122674000E61C6 /* AnimeCell.swift in Sources */,
 				9665C3AB22122431000E61C6 /* PreviewViewController.swift in Sources */,
+				964A3AE7222F11B300C88BA5 /* NetworkHelper.swift in Sources */,
 				964A3ADA222DD03A00C88BA5 /* StorageModel.swift in Sources */,
 				964A3AD7222DCDB300C88BA5 /* LoginView.swift in Sources */,
 				964A3AD022283FAD00C88BA5 /* UserSession.swift in Sources */,
 				964A3ADF222DD19E00C88BA5 /* VCAlerts.swift in Sources */,
 				964A3ACC22259C4B00C88BA5 /* AnimeFirebaseModel.swift in Sources */,
+				964A3AE1222F0B2700C88BA5 /* ProfileViewController.swift in Sources */,
 				96CF31A7221F0EB3003D151E /* UrlConverter.swift in Sources */,
+				964A3AE3222F115200C88BA5 /* ImageHelper.swift in Sources */,
 				964A3ACE22283F4B00C88BA5 /* DatabaseKeys.swift in Sources */,
 				96CF31A1221F0710003D151E /* AnimeModel.swift in Sources */,
 				961A2DE7220CD9C4001A95E6 /* AnimeViewController.swift in Sources */,
@@ -469,6 +484,7 @@
 				96CF31A4221F074C003D151E /* UserModel.swift in Sources */,
 				96CF31AB221F1C42003D151E /* AnimeDetailViewController.swift in Sources */,
 				964A3AD3222841DB00C88BA5 /* DataBaseManager.swift in Sources */,
+				964A3AE5222F117300C88BA5 /* AppError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
