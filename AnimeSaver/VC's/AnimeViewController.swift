@@ -7,20 +7,19 @@
 //
 
 import UIKit
-
-public var animeWanted = "naruto"
-
+import AVFoundation
+import AVKit
 
 class AnimeViewController: UIViewController {
 
-    
-    @IBOutlet weak var AnimeCollectionView: UICollectionView!
-    
+    @IBOutlet weak var animeSearchBar: UISearchBar!
+     
+    @IBOutlet weak var animeCollectionView: UICollectionView!
     
     var anime = [AnimeAttributes](){
         didSet{
             DispatchQueue.main.async {
-            self.AnimeCollectionView.reloadData()
+            self.animeCollectionView.reloadData()
             }
         }
     }
@@ -29,13 +28,25 @@ class AnimeViewController: UIViewController {
         super.viewDidLoad()
         viewDidLoadSetup()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        viewDidLoadSetup()
+    }
 
     func viewDidLoadSetup(){
-        MyNetworkHelper.update { (animes) in
+        MyNetworkHelper.updateFromName(keyword: "Naruto", complete: { (animes) in
            self.anime = animes
-        }
-        AnimeCollectionView.dataSource = self
-        AnimeCollectionView.delegate = self
+        })
+        animeCollectionView.dataSource = self
+        animeCollectionView.delegate = self
+        animeSearchBar.delegate = self
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = animeCollectionView.indexPathsForSelectedItems,
+            let animeDVC = segue.destination as? AnimeDetailViewController else {return}
+        animeDVC.animeOfIntrestADV = anime[indexPath[0].row]
     }
 }
 
@@ -46,7 +57,7 @@ extension AnimeViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let collectionCell = AnimeCollectionView.dequeueReusableCell(withReuseIdentifier: "AnimeCell", for: indexPath) as? AnimeCell else{return UICollectionViewCell()}
+        guard let collectionCell = animeCollectionView.dequeueReusableCell(withReuseIdentifier: "AnimeCell", for: indexPath) as? AnimeCell else{return UICollectionViewCell()}
         
         
         if anime[indexPath.row].attributes.posterImage.original == nil{
@@ -68,10 +79,43 @@ extension AnimeViewController: UICollectionViewDataSource{
 
 extension AnimeViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        " "
-    }
+        let animeDetailVC = PreviewViewContoller()
+        animeDetailVC.animeOfIntrest = anime[indexPath.row]
+
+        
+
     
 }
+}
+
+// good to go SearchBar
 extension AnimeViewController: UISearchBarDelegate{
-    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let text = searchBar.text{
+        print(text)
+        MyNetworkHelper.updateFromCatagory(keyword: text) { (anime) in
+            if anime.isEmpty{
+                MyNetworkHelper.updateFromName(keyword: text, complete: { (anime) in
+                    if anime.isEmpty{
+                        let alert = UIAlertController.init(title: "Error", message: "No Anime Found", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "ok", style: .cancel, handler: nil))
+                        self.present(alert, animated: true)
+                    }else{
+                        self.anime = anime
+                    }
+                })
+            }else{
+                self.anime = anime
+            }
+        }
+        searchBar.resignFirstResponder()
+    }
+        else{ let alert = UIAlertController.init(title: "Error", message: "Invalid Request", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ok", style: .cancel, handler: nil))
+            present(alert, animated: true)
+            
+        }
 }
+
+}
+

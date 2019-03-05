@@ -1,25 +1,31 @@
 //
-//  PreviewViewController.swift
+//  AnimeDetailViewController.swift
 //  AnimeSaver
 //
-//  Created by Jason on 2/21/19.
+//  Created by Jason on 2/11/19.
 //  Copyright © 2019 Jason. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
+import AVKit
+import WebKit
 
-class PreviewViewController: UIViewController {
-    var test = ""
+
+class PreviewViewContoller: UIViewController {
     
+    @IBOutlet weak var animeWebView: WKWebView!
+    
+    
+    var animeOfIntrest: AnimeAttributes?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        animeWebView.load(MyNetworkHelper.youtubeVidLoader(videoCode: (animeOfIntrest?.attributes.youtubeVideoId ?? "sTSA_sWGM44")))
+        
     }
     
-
-  
+    
 
 }

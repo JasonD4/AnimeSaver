@@ -9,10 +9,12 @@
 import Foundation
 
 struct AnimeFound: Codable {
+    
     let data: [AnimeAttributes]
 }
 
 struct AnimeAttributes: Codable {
+    let id: String
     let attributes: AnimeData
 }
 
