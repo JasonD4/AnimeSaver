@@ -7,15 +7,16 @@
 //
 
 import UIKit
-import AVFoundation
-import AVKit
+import FirebaseAuth
 
 class AnimeViewController: UIViewController {
 
     @IBOutlet weak var animeSearchBar: UISearchBar!
-     
     @IBOutlet weak var animeCollectionView: UICollectionView!
     
+    @IBOutlet weak var logingStatus: UIBarButtonItem!
+    
+    private var user: UserSession!
     var anime = [AnimeAttributes](){
         didSet{
             DispatchQueue.main.async {
@@ -28,9 +29,15 @@ class AnimeViewController: UIViewController {
         super.viewDidLoad()
         viewDidLoadSetup()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        viewDidLoadSetup()
+        if Auth.auth().currentUser == nil{
+            logingStatus.title = "Login"
+        }else{
+            logingStatus.title = ""
+            logingStatus.isEnabled = false
+        }
     }
 
     func viewDidLoadSetup(){
@@ -49,16 +56,12 @@ class AnimeViewController: UIViewController {
         animeDVC.animeOfIntrestADV = anime[indexPath[0].row]
     }
     
-    @IBAction func login(_ sender: UIBarButtonItem) {
-        let story = UIStoryboard(name: "Main", bundle: nil)
-        let vc = story.instantiateViewController(withIdentifier: "LoginVC")
-//        self.present(vc, animated: true)
-        
-        navigationController?.pushViewController(vc, animated: true)
+        @IBAction func login(_ sender: UIBarButtonItem) {
+            let story = UIStoryboard(name: "Main", bundle: nil)
+            let vc = story.instantiateViewController(withIdentifier: "LoginVC")
+            navigationController?.pushViewController(vc, animated: true)
     }
 }
-
-
 extension AnimeViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return anime.count
@@ -99,7 +102,7 @@ extension AnimeViewController: UICollectionViewDelegate{
 // good to go SearchBar
 extension AnimeViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let text = searchBar.text{
+        if let text = searchBar.text?.replacingOccurrences(of: " ", with: "-"){
         print(text)
         MyNetworkHelper.updateFromCatagory(keyword: text) { (anime) in
             if anime.isEmpty{

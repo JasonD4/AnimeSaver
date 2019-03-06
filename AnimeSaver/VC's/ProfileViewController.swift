@@ -27,6 +27,9 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
     super.viewDidLoad()
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
             userSession = (UIApplication.shared.delegate as! AppDelegate).usersession
             storageModel = (UIApplication.shared.delegate as! AppDelegate).storageManager
             

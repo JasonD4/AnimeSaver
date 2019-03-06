@@ -10,5 +10,6 @@ import Foundation
 
 struct DatabaseKeys {
     static let userCollectionKey = "users"
+    static let userCollectionReviewsKey = "Reviews"
     
 }

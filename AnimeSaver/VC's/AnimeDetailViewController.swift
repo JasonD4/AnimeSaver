@@ -23,14 +23,20 @@ class AnimeDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-getTheAnimeInfoAnime()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       guard let animeDVC = segue.destination as? PreviewViewContoller else {return}
-        animeDVC.animeOfIntrest = animeOfIntrestADV
+        getTheAnimeInfoAnime()
     }
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if ((segue.destination as? ReviewViewController) != nil){
+        guard let reviewVC = segue.destination as? ReviewViewController else{return}
+        reviewVC.anime = animeOfIntrestADV
+        }else{
+       guard let animeDVC = segue.destination as? PreviewViewContoller else {return}
+        animeDVC.animeOfIntrest = animeOfIntrestADV
+        }
+    }
     
 
 }
@@ -64,18 +70,18 @@ extension AnimeDetailViewController{
             ageRating.text = "\(animeOfIntrestADV?.attributes.ageRating ?? "") \(animeOfIntrestADV?.attributes.ageRatingGuide ?? "") I wouldnt recommend to watch this at work"
             
         }
-        else  { ageRating.text = "\(animeOfIntrestADV?.attributes.ageRating ?? "") \(animeOfIntrestADV?.attributes.ageRatingGuide ?? "") This is safe to watch at the work"
+        else{ ageRating.text = "\(animeOfIntrestADV?.attributes.ageRating ?? "") \(animeOfIntrestADV?.attributes.ageRatingGuide ?? "") This is safe to watch at the work"
         }
         
         if animeOfIntrestADV?.attributes.ja_jp == nil{
-            japaneseName.text = animeOfIntrestADV?.attributes.canonicalTitle
+            japaneseName.text = "Same as English"
         }
         else{
             japaneseName.text = "japanese name: \(animeOfIntrestADV?.attributes.ja_jp ?? "")"
             
             
         }
-        episodeLength.text =  animeOfIntrestADV?.attributes.synopsis ?? ""
+        summaryOfSaidAnime.text =  animeOfIntrestADV?.attributes.synopsis ?? ""
         
     }
 }
