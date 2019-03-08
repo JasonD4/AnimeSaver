@@ -15,7 +15,7 @@ class ProfileViewController: UIViewController {
     
     private var userSession: UserSession!
     private var storageModel: StorageManager!
-    
+    private var picHolder = ["Neptune3", "Noire3", "Blanc3"]
     private lazy var pickerImage: UIImagePickerController = {
         let imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
@@ -26,10 +26,10 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
     super.viewDidLoad()
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        profileImageButton.setImage(UIImage.init(named: picHolder.randomElement()!), for: .normal)
             userSession = (UIApplication.shared.delegate as! AppDelegate).usersession
             storageModel = (UIApplication.shared.delegate as! AppDelegate).storageManager
             
@@ -37,7 +37,8 @@ class ProfileViewController: UIViewController {
             // set the delegate for sign out
             userSession.usersessionSignOutDelegate = self
             storageModel.delegate = self
-            
+        
+
             // set email label
             guard let user = userSession.getCurrentUser() else {
                 emailLabel.text = "no logged user"

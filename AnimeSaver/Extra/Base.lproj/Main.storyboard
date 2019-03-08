@@ -388,11 +388,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wto-7M-4oF">
-                                <rect key="frame" x="85" y="252.5" width="205" height="133"/>
+                                <rect key="frame" x="87.5" y="219" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Wto-7M-4oF" secondAttribute="height" multiplier="23:15" id="vns-kz-wrV"/>
+                                    <constraint firstAttribute="width" secondItem="Wto-7M-4oF" secondAttribute="height" multiplier="10:10" id="vns-kz-wrV"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="Neptune3"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="photoPicture:" destination="EGC-Ne-1lx" eventType="touchUpInside" id="9QV-On-Dja"/>
                                 </connections>
@@ -409,7 +409,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="808-Pj-GKT">
-                                <rect key="frame" x="20" y="405.5" width="335" height="21"/>
+                                <rect key="frame" x="20" y="439" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -417,7 +417,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Wto-7M-4oF" firstAttribute="height" secondItem="xdY-VO-S34" secondAttribute="height" multiplier="0.2" id="177-m9-wAA"/>
+                            <constraint firstItem="Wto-7M-4oF" firstAttribute="height" secondItem="xdY-VO-S34" secondAttribute="height" multiplier="0.3" id="177-m9-wAA"/>
                             <constraint firstItem="808-Pj-GKT" firstAttribute="leading" secondItem="j08-k0-unX" secondAttribute="leading" constant="20" id="6tR-r5-QCJ"/>
                             <constraint firstItem="j08-k0-unX" firstAttribute="trailing" secondItem="808-Pj-GKT" secondAttribute="trailing" constant="20" id="7nr-R1-2Ey"/>
                             <constraint firstItem="808-Pj-GKT" firstAttribute="top" secondItem="Wto-7M-4oF" secondAttribute="bottom" constant="20" id="DZQ-S9-8S2"/>
@@ -428,7 +428,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j08-k0-unX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="xva-Wg-nIQ"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="xva-Wg-nIQ"/>
                     <connections>
                         <outlet property="emailLabel" destination="808-Pj-GKT" id="uTt-zE-Vi9"/>
                         <outlet property="profileImageButton" destination="Wto-7M-4oF" id="AhW-6g-x4i"/>
@@ -443,7 +443,7 @@
         <scene sceneID="NOh-2y-VsX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yTJ-9f-5HH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="h7E-Ke-ol4"/>
+                    <tabBarItem key="tabBarItem" title="Search" systemItem="search" id="h7E-Ke-ol4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OkD-z7-4Lb">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -602,11 +602,11 @@
             </objects>
             <point key="canvasLocation" x="1138.4000000000001" y="984.55772113943033"/>
         </scene>
-        <!--Favorites-->
+        <!--Navigation Controller-->
         <scene sceneID="qvu-dE-8R9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yHB-Nv-mow" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" id="3MX-qy-a1c"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="3MX-qy-a1c"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b0N-OO-x7R">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -622,7 +622,4 @@
             <point key="canvasLocation" x="-703.20000000000005" y="987.25637181409309"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Neptune3" width="763" height="875"/>
-    </resources>
 </document>

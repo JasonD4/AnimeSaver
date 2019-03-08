@@ -78,8 +78,8 @@ class FavoritesViewController: UIViewController {
         
             favDVC.reviewInfo = favorties[indexpath.row]
         }
-    }
 
+}
 
 extension FavoritesViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -99,7 +99,6 @@ extension FavoritesViewController: UITableViewDataSource{
         }
         cell.userName.text = favorties[indexPath.row].userName
         cell.nameOfAnime.text = favorties[indexPath.row].animeName
-        
         return cell
     }
     
@@ -108,6 +107,6 @@ extension FavoritesViewController: UITableViewDataSource{
 
 extension FavoritesViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(400)
+        return CGFloat(300)
     }
 }

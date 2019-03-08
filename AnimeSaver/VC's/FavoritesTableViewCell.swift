@@ -12,5 +12,4 @@ class FavoritesTableViewCell: UITableViewCell {
     @IBOutlet weak var animePicture: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var nameOfAnime: UILabel!
-    
 }
