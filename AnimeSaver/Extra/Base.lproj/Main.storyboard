@@ -60,7 +60,7 @@
                                         <connections>
                                             <outlet property="animeName" destination="4no-cc-NSy" id="ENx-fD-WIz"/>
                                             <outlet property="animePic" destination="ppR-PW-dVE" id="YPI-dX-9Tm"/>
-                                            <segue destination="Q2P-lt-LQN" kind="show" id="Wgd-hV-dnc"/>
+                                            <segue destination="Q2P-lt-LQN" kind="show" identifier="" id="Wgd-hV-dnc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -183,7 +183,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoj-hT-Pll">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="testing" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoj-hT-Pll">
                                 <rect key="frame" x="295" y="64" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="6C5-Yc-4UT"/>
@@ -191,7 +191,7 @@
                                 </constraints>
                                 <state key="normal" title="Preview"/>
                                 <connections>
-                                    <segue destination="7GI-9O-Jg7" kind="show" id="RkQ-gf-D7r"/>
+                                    <segue destination="7GI-9O-Jg7" kind="show" identifier="testing" id="RkQ-gf-D7r"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SmC-kN-qzk">

@@ -10,7 +10,7 @@ import Foundation
 import FirebaseAuth
 
 protocol UserSessionAccountCreationDelegate: AnyObject {
-    func didCreateAccount(_ userSession: UserSession, user: User)
+    func didCreateAccount()
     func didRecieveErrorCreatingAccount(_ userSession: UserSession, error: Error)
 }
 
@@ -47,7 +47,7 @@ final class UserSession{
                             print("error adding authenticated user to the database: \(error)")
                             
                         }else{
-                            
+                            self.userSessionAccountDelegate?.didCreateAccount()
                         }
                 })
                 

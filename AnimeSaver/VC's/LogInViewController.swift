@@ -89,7 +89,7 @@ extension LogInViewController: LoginViewDelegate{
 
 extension LogInViewController: UserSessionAccountCreationDelegate{
     
-    func didCreateAccount(_ userSession: UserSession, user: User) {
+    func didCreateAccount() {
         let story = UIStoryboard(name: "Main", bundle: nil)
         let tabController = story.instantiateViewController(withIdentifier: "test")
         present(tabController, animated: true)
