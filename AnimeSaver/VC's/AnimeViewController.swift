@@ -102,6 +102,7 @@ extension AnimeViewController: UICollectionViewDelegate{
 // good to go SearchBar
 extension AnimeViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let indexPath = IndexPath(row: 0, section: 0)
         if let text = searchBar.text?.replacingOccurrences(of: " ", with: "-"){
         print(text)
         MyNetworkHelper.updateFromCatagory(keyword: text) { (anime) in
@@ -113,10 +114,18 @@ extension AnimeViewController: UISearchBarDelegate{
                         self.present(alert, animated: true)
                     }else{
                         self.anime = anime
+                        DispatchQueue.main.async{
+                        self.animeCollectionView.scrollToItem(at: indexPath, at: .top, animated: true)
+                        searchBar.text = ""
+                        }
                     }
                 })
             }else{
                 self.anime = anime
+                DispatchQueue.main.async{
+                self.animeCollectionView.scrollToItem(at: indexPath, at: .top, animated: true)
+                searchBar.text = ""
+                }
             }
         }
         searchBar.resignFirstResponder()

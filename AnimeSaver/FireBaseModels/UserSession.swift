@@ -46,6 +46,8 @@ final class UserSession{
                         if let error = error {
                             print("error adding authenticated user to the database: \(error)")
                             
+                        }else{
+                            
                         }
                 })
                 

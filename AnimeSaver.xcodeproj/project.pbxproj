@@ -30,6 +30,7 @@
 		964A3AE9223029BA00C88BA5 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AE8223029BA00C88BA5 /* ReviewViewController.swift */; };
 		964A3AEB2230443200C88BA5 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AEA2230443200C88BA5 /* FavoritesViewController.swift */; };
 		964A3AED223044BD00C88BA5 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AEC223044BD00C88BA5 /* FavoritesTableViewCell.swift */; };
+		964A3AEF22305D0600C88BA5 /* FavoriteDetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AEE22305D0600C88BA5 /* FavoriteDetalViewController.swift */; };
 		9665C3AB22122431000E61C6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665C3AA22122431000E61C6 /* PreviewViewController.swift */; };
 		9665C3AF22122674000E61C6 /* AnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665C3AE22122674000E61C6 /* AnimeCell.swift */; };
 		96CB6FEB2225961600810F11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96CB6FEA2225961600810F11 /* GoogleService-Info.plist */; };
@@ -89,6 +90,7 @@
 		964A3AE8223029BA00C88BA5 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		964A3AEA2230443200C88BA5 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		964A3AEC223044BD00C88BA5 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		964A3AEE22305D0600C88BA5 /* FavoriteDetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDetalViewController.swift; sourceTree = "<group>"; };
 		9665C3AA22122431000E61C6 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		9665C3AE22122674000E61C6 /* AnimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCell.swift; sourceTree = "<group>"; };
 		96CB6FEA2225961600810F11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				964A3AE8223029BA00C88BA5 /* ReviewViewController.swift */,
 				964A3AEA2230443200C88BA5 /* FavoritesViewController.swift */,
 				964A3AEC223044BD00C88BA5 /* FavoritesTableViewCell.swift */,
+				964A3AEE22305D0600C88BA5 /* FavoriteDetalViewController.swift */,
 			);
 			path = "VC's";
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				96CF31A9221F0F67003D151E /* MyNetworkHelper.swift in Sources */,
 				964A3ADC222DD06D00C88BA5 /* StorageKeys.swift in Sources */,
 				9665C3AF22122674000E61C6 /* AnimeCell.swift in Sources */,
+				964A3AEF22305D0600C88BA5 /* FavoriteDetalViewController.swift in Sources */,
 				9665C3AB22122431000E61C6 /* PreviewViewController.swift in Sources */,
 				964A3AE7222F11B300C88BA5 /* NetworkHelper.swift in Sources */,
 				964A3ADA222DD03A00C88BA5 /* StorageModel.swift in Sources */,

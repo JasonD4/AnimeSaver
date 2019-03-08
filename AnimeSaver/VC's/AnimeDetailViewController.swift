@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AVFoundation
+import FirebaseAuth
 
 class AnimeDetailViewController: UIViewController {
     var animeOfIntrestADV: AnimeAttributes?
@@ -30,11 +30,17 @@ class AnimeDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if ((segue.destination as? ReviewViewController) != nil){
+            if Auth.auth().currentUser == nil{
+             let alert =  UIAlertController(title: "Problem", message: "Please log in", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel))
+                self.present(alert, animated: true)
+            }else{
         guard let reviewVC = segue.destination as? ReviewViewController else{return}
         reviewVC.anime = animeOfIntrestADV
-        }else{
+            }
+            } else {
        guard let animeDVC = segue.destination as? PreviewViewContoller else {return}
-        animeDVC.animeOfIntrest = animeOfIntrestADV
+                animeDVC.animeOfIntrest = self.animeOfIntrestADV
         }
     }
     

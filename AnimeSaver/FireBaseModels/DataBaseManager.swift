@@ -21,7 +21,7 @@ final class DataBaseManager{
     }()
     
     static func postAnimeReview(animeRview: AnimeFirebaseModel) {
-        firebaseDB.collection(DatabaseKeys.userCollectionReviewsKey).document(animeRview.userId.description).setData([
+        firebaseDB.collection(DatabaseKeys.userCollectionReviewsKey).document().setData([
             "animeName"    : animeRview.animeName,
             "userReview"  : animeRview.userReview,
             "image"  : animeRview.image,
@@ -29,6 +29,7 @@ final class DataBaseManager{
             "AnimeId"   : animeRview.AnimeId,
             "episode"    : animeRview.episode,
             "lore"  : animeRview.lore,
+            "userName": animeRview.userName,
             "lastSearchTerm": animeRview.lastSearchTerm ?? ""
             ], completion: { (error) in
                 if let error = error {

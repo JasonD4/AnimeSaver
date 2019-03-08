@@ -88,13 +88,12 @@ extension LogInViewController: LoginViewDelegate{
 
 
 extension LogInViewController: UserSessionAccountCreationDelegate{
+    
     func didCreateAccount(_ userSession: UserSession, user: User) {
-        showAlert(title: "Account Created", message: "Account created using \(user.email ?? "No Email Provided")", style: .alert) { (alert) in
-            
-            let story = UIStoryboard(name: "Main", bundle: nil)
-            let vc = story.instantiateViewController(withIdentifier: "AnimeViewContoller")
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let tabController = story.instantiateViewController(withIdentifier: "test")
+        present(tabController, animated: true)
+
     }
     
     func didRecieveErrorCreatingAccount(_ userSession: UserSession, error: Error) {
@@ -110,6 +109,7 @@ extension LogInViewController: UserSessionSignInDelegate{
     }
     
     func didSignInExistingUser(_ usersession: UserSession, user: User) {
+        
         let story = UIStoryboard(name: "Main", bundle: nil)
         let tabController = story.instantiateViewController(withIdentifier: "test")
         present(tabController, animated: true)
