@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImageButton: UIButton!
@@ -27,12 +28,16 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
     super.viewDidLoad()
     }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
         profileImageButton.setImage(UIImage.init(named: picHolder.randomElement()!), for: .normal)
             userSession = (UIApplication.shared.delegate as! AppDelegate).usersession
             storageModel = (UIApplication.shared.delegate as! AppDelegate).storageManager
-            
+        
+     
             
             // set the delegate for sign out
             userSession.usersessionSignOutDelegate = self
@@ -42,6 +47,7 @@ class ProfileViewController: UIViewController {
             // set email label
             guard let user = userSession.getCurrentUser() else {
                 emailLabel.text = "no logged user"
+
                 return
             }
             emailLabel.text = user.email ?? "no email found for logged user"
@@ -63,8 +69,8 @@ class ProfileViewController: UIViewController {
             }
         }
     
-    @IBAction func signOut(_ sender: UIButton) {
-        userSession.signOut()
+    @IBAction func signOut(_ sender: UIButton){
+            userSession.signOut()
     }
     
     @IBAction func photoPicture(_ sender: UIButton) {

@@ -12,7 +12,7 @@ import FirebaseFirestore
 
 class FavoritesViewController: UIViewController {
     
-    var favorties = [AnimeFirebaseModel]() {
+    var favorties = [AnimeFirebaseModel]().sorted(by: ){$0.animeName == $1.animeName} {
         didSet{
             DispatchQueue.main.async {
                 self.favoriteTableView.reloadData()
@@ -55,9 +55,8 @@ class FavoritesViewController: UIViewController {
                         for document in snapshot.documents{
                             let animeReviews = AnimeFirebaseModel(dict: document.data())
                             reviews.append(animeReviews)
-
                     }
-                        self.favorties = reviews.filter(){$0.userName == $0.userName}
+                        self.favorties = reviews.sorted(by: ){$0.animeName == $1.animeName}
                 }
             }
            // let info = Storage.storage().

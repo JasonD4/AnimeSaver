@@ -398,11 +398,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnt-a0-ap7">
-                                <rect key="frame" x="290" y="40" width="55" height="30"/>
+                                <rect key="frame" x="245" y="40" width="100" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="VJr-S6-xdN"/>
+                                    <constraint firstAttribute="width" constant="100" id="VJr-S6-xdN"/>
                                     <constraint firstAttribute="height" constant="30" id="tlO-sd-bYv"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Signout"/>
                                 <connections>
                                     <action selector="signOut:" destination="EGC-Ne-1lx" eventType="touchUpInside" id="Kri-72-iWD"/>
@@ -428,7 +429,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j08-k0-unX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="xva-Wg-nIQ"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="xva-Wg-nIQ"/>
                     <connections>
                         <outlet property="emailLabel" destination="808-Pj-GKT" id="uTt-zE-Vi9"/>
                         <outlet property="profileImageButton" destination="Wto-7M-4oF" id="AhW-6g-x4i"/>
@@ -464,6 +465,7 @@
                 <tabBarController restorationIdentifier="test" storyboardIdentifier="test" title="test" automaticallyAdjustsScrollViewInsets="NO" id="676-y4-Lb1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lF0-iX-9wd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

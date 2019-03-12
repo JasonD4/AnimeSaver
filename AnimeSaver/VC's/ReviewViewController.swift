@@ -35,7 +35,9 @@ class ReviewViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "ok", style: .cancel, handler: nil))
             present(alert, animated: true)
         }else{
+            Review.resignFirstResponder()
             let animeSave = AnimeFirebaseModel.init(animeName: anime?.attributes.canonicalTitle ?? "", userReview: Review.text, image: anime?.attributes.posterImage.original?.absoluteString ?? "", userId: user.uid, AnimeId: anime?.id ?? "", episode: anime?.attributes.episodeCount ?? 0, lore: anime?.attributes.synopsis ?? "", userName: userSession.getCurrentUser()?.email ?? "", lastSearchTerm: nil)
+            AVHelper.playMusic()
             DataBaseManager.postAnimeReview(animeRview: animeSave)
             self.navigationController?.popViewController(animated: true)
             

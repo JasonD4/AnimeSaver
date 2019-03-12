@@ -31,6 +31,8 @@
 		964A3AEB2230443200C88BA5 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AEA2230443200C88BA5 /* FavoritesViewController.swift */; };
 		964A3AED223044BD00C88BA5 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AEC223044BD00C88BA5 /* FavoritesTableViewCell.swift */; };
 		964A3AEF22305D0600C88BA5 /* FavoriteDetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AEE22305D0600C88BA5 /* FavoriteDetalViewController.swift */; };
+		964A3AF12236AFDB00C88BA5 /* AVHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964A3AF02236AFDB00C88BA5 /* AVHelper.swift */; };
+		964A3AF82237FA0500C88BA5 /* Bestofbestest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 964A3AF72237FA0500C88BA5 /* Bestofbestest.mp3 */; };
 		9665C3AB22122431000E61C6 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665C3AA22122431000E61C6 /* PreviewViewController.swift */; };
 		9665C3AF22122674000E61C6 /* AnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9665C3AE22122674000E61C6 /* AnimeCell.swift */; };
 		96CB6FEB2225961600810F11 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96CB6FEA2225961600810F11 /* GoogleService-Info.plist */; };
@@ -91,6 +93,8 @@
 		964A3AEA2230443200C88BA5 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		964A3AEC223044BD00C88BA5 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		964A3AEE22305D0600C88BA5 /* FavoriteDetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDetalViewController.swift; sourceTree = "<group>"; };
+		964A3AF02236AFDB00C88BA5 /* AVHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVHelper.swift; sourceTree = "<group>"; };
+		964A3AF72237FA0500C88BA5 /* Bestofbestest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bestofbestest.mp3; sourceTree = "<group>"; };
 		9665C3AA22122431000E61C6 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		9665C3AE22122674000E61C6 /* AnimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCell.swift; sourceTree = "<group>"; };
 		96CB6FEA2225961600810F11 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 		961A2DE3220CD9C4001A95E6 /* AnimeSaver */ = {
 			isa = PBXGroup;
 			children = (
+				964A3AF72237FA0500C88BA5 /* Bestofbestest.mp3 */,
 				964A3ADD222DD17A00C88BA5 /* A'lerts */,
 				964A3AD8222DCDBB00C88BA5 /* Views */,
 				964A3AD1222841B000C88BA5 /* FireBaseModels */,
@@ -259,6 +264,7 @@
 				964A3AE2222F115200C88BA5 /* ImageHelper.swift */,
 				964A3AE4222F117300C88BA5 /* AppError.swift */,
 				964A3AE6222F11B300C88BA5 /* NetworkHelper.swift */,
+				964A3AF02236AFDB00C88BA5 /* AVHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964A3AF82237FA0500C88BA5 /* Bestofbestest.mp3 in Resources */,
 				961A2DEF220CD9C4001A95E6 /* LaunchScreen.storyboard in Resources */,
 				961A2DEC220CD9C4001A95E6 /* Assets.xcassets in Resources */,
 				96CB6FEB2225961600810F11 /* GoogleService-Info.plist in Resources */,
@@ -500,6 +507,7 @@
 				96CF31A4221F074C003D151E /* UserModel.swift in Sources */,
 				96CF31AB221F1C42003D151E /* AnimeDetailViewController.swift in Sources */,
 				964A3AD3222841DB00C88BA5 /* DataBaseManager.swift in Sources */,
+				964A3AF12236AFDB00C88BA5 /* AVHelper.swift in Sources */,
 				964A3AE5222F117300C88BA5 /* AppError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

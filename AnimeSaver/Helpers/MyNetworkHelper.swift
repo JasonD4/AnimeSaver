@@ -23,7 +23,7 @@ final class MyNetworkHelper{
                 let AllAnime = try JSONDecoder().decode(AnimeFound.self, from: data)
                 anime = AllAnime.data
                 complete(anime)
-                print(anime.count)
+                
             }catch{
                 print("error is: \(error)")
             }
@@ -42,7 +42,6 @@ final class MyNetworkHelper{
             let AllAnime = try JSONDecoder().decode(AnimeFound.self, from: data)
             anime = AllAnime.data
             complete(anime)
-            print(anime.count)
         }catch{
             print("error is: \(error)")
         }
@@ -60,7 +59,7 @@ private static func loadingData(keyword: String,escapee: @escaping (Data) -> Voi
     URLSession.shared.dataTask(with: myURL) { (data, response, error) in
         // these 3 are variables
         if let response = response {
-            print(response)
+//            print(response)
         }
         if let error = error{
             print(error)
@@ -81,7 +80,7 @@ private static func loadingDataByCatagory (keyword: String, escapee: @escaping (
     URLSession.shared.dataTask(with: myURL) { (data, response, error) in
         // these 3 are variables
         if let response = response {
-            print(response)
+//            print(response)
         }
         if let error = error{
             print(error)
